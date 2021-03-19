@@ -1,6 +1,9 @@
 name: 'Create gh-pages If It Does Not Exist'
 description: 'Create gh-pages if it does not exist'
 author: "Christopher Daveport"
+branding:
+  icon: "upload"
+  color: "green"
 runs:
   using: "composite"
   steps:
