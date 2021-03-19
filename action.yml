@@ -5,7 +5,7 @@ runs:
   steps:
     - id: github-pages-exists
       run: |
-        local existed_in_remote=$(git ls-remote --heads origin gh-pages)
+        existed_in_remote=$(git ls-remote --heads origin gh-pages)
 
         if [[ -z ${existed_in_remote} ]]; then
             echo 0
