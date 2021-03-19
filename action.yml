@@ -17,7 +17,7 @@ runs:
 
         if [[ -z ${existed_in_remote} ]]; then
           echo "Creating gh-pages branch"
-          git config --global user.email "chris@christopherdavenport.tech"
+          git config --global user.email "christopherdavenport@users.noreply.github.com"
           git config --global user.name "Christopher Davenport"
           git checkout --orphan gh-pages
           git reset --hard
