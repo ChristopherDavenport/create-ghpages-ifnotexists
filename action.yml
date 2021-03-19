@@ -1,5 +1,6 @@
 name: 'Create gh-pages If It Does Not Exist'
 description: 'Create gh-pages if it does not exist'
+author: "Christopher Daveport"
 runs:
   using: "composite"
   steps:
