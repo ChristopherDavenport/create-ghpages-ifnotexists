@@ -5,6 +5,7 @@ runs:
   steps:
     - name: Branch name
       id: branch_name
+      shell: bash
       run: |
         echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
         echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
