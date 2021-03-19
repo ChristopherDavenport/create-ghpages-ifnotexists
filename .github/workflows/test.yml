@@ -10,7 +10,5 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]
     steps:
       - uses: actions/checkout@v1
-      - run: yarn install
-      - run: yarn run build
       - uses: ./
       - run: git ls-remote --heads origin gh-pages
