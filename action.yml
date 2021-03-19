@@ -1,0 +1,20 @@
+name: 'Create gh-pages If It Does Not Exist'
+description: 'Create gh-pages if it does not exist'
+runs:
+  using: "composite"
+  steps:
+    - id: github-pages-exists
+      run: |
+        local existed_in_remote=$(git ls-remote --heads origin gh-pages)
+
+        if [[ -z ${existed_in_remote} ]]; then
+            echo 0
+        else
+            git checkout --orphan gh-pages
+            git reset --hard
+            git commit --allow-empty -m "Initializing gh-pages branch"
+            git push origin gh-pages
+            git checkout master
+        fi
+      shell: bash
+
